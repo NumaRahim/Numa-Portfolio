@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Young Innovators | Numa Rahim</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fff;
+        --text: #1c1c3a;
+        --head: #0b0b55;
+        --surface: #f4f3fb;
+        --line: #d0cfe8;
+        --navy: #2f3163;
+        --acc: #6c69d6;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #12122b;
+          --text: #dcdcf2;
+          --head: #e6e4ff;
+          --surface: #1b1b3d;
+          --line: #34346a;
+          --navy: #0b0b26;
+          --acc: #a9a6ff;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #12122b;
+        --text: #dcdcf2;
+        --head: #e6e4ff;
+        --surface: #1b1b3d;
+        --line: #34346a;
+        --navy: #0b0b26;
+        --acc: #a9a6ff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          "Outfit",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Arial,
+          sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      .wrap {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header.site {
+        position: sticky;
+        top: env(safe-area-inset-top, 0px);
+        z-index: 10;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      .logo {
+        color: var(--head);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .who {
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--acc);
+        font-weight: 600;
+      }
+      main {
+        padding-top: 40px;
+        padding-bottom: 56px;
+      }
+      .eyebrow {
+        margin: 0 0 6px;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--acc);
+        font-weight: 600;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(38px, 7vw, 60px);
+        line-height: 1.05;
+        color: var(--head);
+        text-transform: uppercase;
+      }
+      .sub {
+        margin: 10px 0 26px;
+        font-size: clamp(18px, 2.6vw, 24px);
+      }
+      .shot {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.25);
+      }
+      .banner {
+        background: #6558e8;
+        color: #fff;
+        border-radius: 24px;
+        padding: 56px 32px;
+        box-shadow: 6px 8px 12px rgba(0, 0, 0, 0.25);
+      }
+      .pill {
+        display: inline-block;
+        background: #fff;
+        color: #3b30c9;
+        font-weight: 600;
+        font-size: clamp(18px, 3vw, 26px);
+        padding: 4px 18px;
+        border-radius: 6px;
+      }
+      .bt {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(30px, 6vw, 48px);
+        line-height: 1.15;
+        margin-top: 18px;
+      }
+      h2 {
+        margin: 40px 0 10px;
+        font-size: 26px;
+        color: var(--head);
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0 0 14px;
+        font-weight: 300;
+      }
+      .blk {
+        background: var(--surface);
+        border: 1.5px solid var(--line);
+        border-radius: 22px;
+        padding: 20px 24px;
+        margin: 0 0 14px;
+      }
+      .blk h3 {
+        margin: 0 0 6px;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--acc);
+      }
+      .blk p {
+        margin: 0;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 6px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .chips li {
+        border: 1.5px solid var(--head);
+        color: var(--head);
+        border-radius: 999px;
+        padding: 2px 14px;
+        font-size: 15px;
+        background: var(--bg);
+      }
+      footer {
+        background: var(--navy);
+        color: #fff;
+        padding: 22px 0;
+        font-size: 15px;
+      }
+      .funnel-image {
+        width: 75%; /* image/div ki overall width */
+        margin: 20px auto 40px;
+        
+      }
+
+      .funnel-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 24px;
+      }
+      .funnel-image {
+        width: 75%; /* image/div ki overall width */
+        margin: 20px auto 40px;
+      }
+
+      .funnel-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 24px;
+      }
+      @media (max-width: 600px) {
+        .banner {
+          padding: 36px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="logo" href="portfolio.html#projects">← Back to portfolio</a
+        ><span class="who">NUMA RAHIM</span>
+      </div>
+    </header>
+    <main class="wrap">
+      <p class="eyebrow">No-Code Automation</p>
+      <h1>Young Innovators</h1>
+      <p class="sub">Childcare Lead Generation &amp; Automation System</p>
+      <h2>Introduction</h2>
+      <p>
+        Young Innovators is a childcare education and coaching business that
+        provides courses designed to support childcare professionals and
+        individuals in developing the knowledge and skills needed for effective
+        child upbringing and childcare business management. For this project, I
+        developed a complete automated course sales and lead-generation system
+        for Young Innovators. The system included the design and implementation
+        of multiple conversion funnels, lead capture workflows, automated
+        follow-ups, and course enrollment processes. I also integrated Stripe
+        for secure course payments and implemented coupon generation to support
+        promotional campaigns. Once a customer purchases a course, the
+        automation system handles the post-purchase journey automatically.
+        Customers receive confirmation emails through Gmail, course/access
+        links, scheduled reminders, and relevant follow-up communications,
+        reducing manual work while keeping customers engaged throughout the
+        course journey.
+      <h2>Funnel Design & Development</h2>
+      <div. class="funnel-image">
+        <img src="./assets/young-innovators.png" alt="young-innovators" />
+        <h3>Checkout Page</h3>
+        <img src="./assets/checkout page.png" alt="checkout page" />
+      </divclass=>
+    
+      <h2>Automations</h2>
+      <h3>Payment Received Automation</h3>
+      <div class=" Automation-images">
+        <img src="./assets/Payment automation.png" alt="payment-automation" />
+      </div>
+      <h3>Send Certificate Email Upon Trigger</h3>
+      <img src="./assets/Course Completion.png" alt="Course">
+      <h3>Cerificate Coonfirmation Email</h3>
+      <img src="./assets/Email notification.png" alt="email">
+      <h3>Completion Tag Automation</h3>
+      <img src="./assets/tag added.png" alt="completion-tag-automation">
+      <h3>Contact List Showing Records and Tags </h3>
+      <img src="./assets/contact-list.png" alt="contact-list">
+      <h3>Coupon Setup</h3>
+      <img src="./assets/Coupon-setup.png" alt="coupon-setup">
+      <h3>Course Incompletion email</h3>
+      <img src="./assets/Course-Incompletion.png" alt="course-incompletion">
+    </main>
+    <footer>
+      <div class="wrap">© 2026 Numa Rahim. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
